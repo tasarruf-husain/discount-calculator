@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* CSS Variables for Light/Dark Mode */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --input-bg: #fff;
+    --footer-bg: #000;
+    --footer-text: #fff;
+    --header-bg: linear-gradient(to right, #fff, #e6f0fa);
+    --tab-bg: #fff;
+    --calculate-bg: #FF5722;
+    /* Vibrant orange for highlighting */
+    --calculate-hover: #E64A19;
+    --clear-bg: #B0BEC5;
+    /* Neutral gray for Clear button */
+    --clear-hover: #90A4AE;
+}
+
+body.dark-mode {
+    --bg-color: #333;
+    --text-color: #fff;
+    --input-bg: #555;
+    --footer-bg: #000;
+    --footer-text: #fff;
+    --header-bg: linear-gradient(to right, #333, #555);
+    --tab-bg: #555;
+    --calculate-bg: #FF7043;
+    /* Lighter orange for dark mode */
+    --calculate-hover: #FF5722;
+    --clear-bg: #78909C;
+    --clear-hover: #607D8B;
+}
+
+/* Header */
+.header {
+    background: var(--header-bg);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: var(--tab-bg);
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.tab-btn.active {
+    background: var(--calculate-bg);
+    color: #fff;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: var(--tab-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.calculate-btn,
+.clear-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    color: white;
+    font-size: 16px;
+}
+
+.calculate-btn {
+    background-color: var(--calculate-bg);
+}
+
+.calculate-btn:hover {
+    background-color: var(--calculate-hover);
+}
+
+.clear-btn {
+    background-color: var(--clear-bg);
+}
+
+.clear-btn:hover {
+    background-color: var(--clear-hover);
+}
+
+p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content li {
+    margin: 10px 0;
+}
+
+.footer-content li i {
+    color: #ffeb3b;
+    /* Yellow icons */
+    margin-right: 5px;
+}
+
+.social-icons a {
+    color: var(--footer-text);
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tab-btn {
+        margin: 5px 0;
+    }
+}

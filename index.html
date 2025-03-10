@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <img src="logo.jpg" alt="Logo" class="logo">
+        <h1 class="company-name">Discount Calculator</h1>
+    </header>
+    <main class="main-content">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('task1')">Calculate Discount %</button>
+            <button class="tab-btn" onclick="showTab('task2')">Calculate Original Rate</button>
+            <button class="tab-btn" onclick="showTab('task3')">Calculate Discounted Rate</button>
+        </div>
+        <div id="task1" class="tab-content active">
+            <h2>Calculate Discount Percentage</h2>
+            <div class="input-group">
+                <input type="number" placeholder="Original Rate" id="original-rate-task1">
+                <input type="number" placeholder="Discounted Rate" id="discounted-rate-task1">
+            </div>
+            <div class="button-group">
+                <button class="calculate-btn" onclick="calculateTask1()">Calculate <i
+                        class="fas fa-percentage"></i></button>
+                <button class="clear-btn" onclick="clearTask1()">Clear</button>
+            </div>
+            <p id="result-task1">Discount: --%</p>
+        </div>
+        <div id="task2" class="tab-content">
+            <h2>Calculate Original Rate</h2>
+            <div class="input-group">
+                <input type="number" placeholder="Discounted Rate" id="discounted-rate-task2">
+                <input type="number" placeholder="Discount Percentage" id="discount-percent-task2">
+            </div>
+            <div class="button-group">
+                <button class="calculate-btn" onclick="calculateTask2()">Calculate <i
+                        class="fas fa-dollar-sign"></i></button>
+                <button class="clear-btn" onclick="clearTask2()">Clear</button>
+            </div>
+            <p id="result-task2">Original Rate: ₹--</p>
+        </div>
+        <div id="task3" class="tab-content">
+            <h2>Calculate Discounted Rate</h2>
+            <div class="input-group">
+                <input type="number" placeholder="Original Rate" id="original-rate-task3">
+                <input type="number" placeholder="Discount Percentage" id="discount-percent-task3">
+            </div>
+            <div class="button-group">
+                <button class="calculate-btn" onclick="calculateTask3()">Calculate <i class="fas fa-tags"></i></button>
+                <button class="clear-btn" onclick="clearTask3()">Clear</button>
+            </div>
+            <p id="result-task3">Discounted Rate: ₹--</p>
+        </div>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>FresherTalk Digital Solutions</h3>
+            <ul>
+                <li><i class="fas fa-envelope"></i> Email: support@freshertalk.in</li>
+                <li><i class="fas fa-phone"></i> Phone: +91-95350-39501</li>
+                <li><i class="fas fa-globe"></i> Website: https://freshertalk.in</li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
